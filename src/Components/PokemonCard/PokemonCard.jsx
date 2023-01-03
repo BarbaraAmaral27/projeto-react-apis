@@ -21,18 +21,22 @@ const PokemonCard = ({ pokemonUrl, pokemon }) => {
     fetchPokemon();
   }, [pokemonUrl]);
 
- 
+  const configNumber = (index) => {
+    return index < 10 ? `0${index}` : `${index}`;
+}
+
   return (
     <Container color={getColors(detailPokemon.types && detailPokemon.types[0].type.name)} >
       <section>
-        <p>{detailPokemon.id}</p>
+        <p>{`#${configNumber(detailPokemon.id)}`}</p>
         <h1 className="name">{pokemon.name}</h1>
         <div className="container-tipo">
           {detailPokemon.types?.map((type, index) => {
-            return <img key={index} src={getTypes(type.type.name)} alt="" />;
+            return (<img key={index} src={getTypes(type.type.name)} alt="" />
+            );
           })}
         </div>
-        <p>Detalhes</p>
+        <p className="detalhes">Detalhes</p>
       </section>
       <section>
         <img className="img-pokemon"

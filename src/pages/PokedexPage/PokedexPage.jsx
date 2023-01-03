@@ -3,6 +3,7 @@ import PokemonCard from "../../Components/PokemonCard/PokemonCard";
 import Header from "../../Components/HeaderPokedex/Header";
 import axios from "axios";
 import { BASE_URL } from "../../constants/url";
+import { PokedexPageStyled } from "../PokedexPage/styled"
 
 const PokedexPage = () => {
   const [pokemons, setPokemons] = useState([]);
@@ -24,9 +25,10 @@ const PokedexPage = () => {
   return (
     <>
       <Header />
-      <main className="container-pokemons">
-        <h2>Todos os Pokemons</h2>
-        <section>
+      <PokedexPageStyled>
+      <section className="container-pokemons">
+      <h1 className="title">Todos os Pokemons</h1>        
+        <section className="container-pokemon">
           {pokemons.map((pokemon) => {
             return (
               <PokemonCard
@@ -37,7 +39,8 @@ const PokedexPage = () => {
             );
           })}
         </section>
-      </main>
+      </section>
+      </PokedexPageStyled>
     </>
   );
 };

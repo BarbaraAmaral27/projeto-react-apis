@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const HeaderStyled = styled.div`
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
   width: 100%;
@@ -10,7 +10,6 @@ export const HeaderStyled = styled.div`
   left: 0px;
   top: 0px;
   background: #80eae3;
-  gap: 220px;  
 
   .logo-pokemon {
     display: flex;
@@ -20,28 +19,49 @@ export const HeaderStyled = styled.div`
   }
 
   .botao-pokedex {
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 4px 10px;
-width: 250px;
-height: 74px;
-left: 1112px;
-top: 41px;
-margin-right: 30px;
-color: #FFFF;
-size: 24px;
-border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 10px;
+    width: 250px;
+    height: 74px;
+    left: 1112px;
+    top: 41px;
+    margin-right: 40px;
+    color: #ffff;
+    size: 24px;
+    border: none;
 
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 700;
-font-size: 24px;
-line-height: 36px;
+    font-family: "Poppins";
+    font-style: normal;
+    /* font-weight: 700; */
+    font-size: 24px;
+    line-height: 36px;
 
+    background: #f53333;
+    border-radius: 8px;
+  }
 
-background: #f53333;
-border-radius: 8px;
+  .voltar-pokemons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 10px;
+    left: 1112px;
+    top: 41px;
+    margin-left: 40px;
+    color: black;
+    size: 24px;
+    cursor: pointer;
+
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    text-decoration: underline;
+
+    border-radius: 8px;
   }
 `;

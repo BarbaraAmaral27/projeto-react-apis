@@ -1,14 +1,18 @@
-import React from 'react'
-import Header from "../../Components/HeaderDetail/Header"
-import PokemonCard from "../../Components/PokemonCard/PokemonCard"
+import React from "react";
+import Header from "../../Components/HeaderDetail/Header";
+import {PokemonDetailPageStyled} from "./styled";
 
 const PokemonDetailPage = () => {
   return (
     <>
-    <Header/>
-    <div>PokemonDetailPage</div>
+      <PokemonDetailPageStyled>
+        <Header />
+        <section className="container-pokemons">
+          <h1 className="title">Detalhes</h1>
+        </section>
+      </PokemonDetailPageStyled>
     </>
-  )
-}
+  );
+};
 
-export default PokemonDetailPage
+export default PokemonDetailPage;

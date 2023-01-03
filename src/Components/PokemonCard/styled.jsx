@@ -10,7 +10,6 @@ export const Container = styled.div`
   position: relative;
   margin: 33px;
   color: #ffffff;
-  flex-wrap: wrap;
 
   p {
     font-family: "Inter", sans-serif;
@@ -19,15 +18,16 @@ export const Container = styled.div`
     text-align: left;
   }
 
-  h2 {
+  h1 {
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 0em;
     text-align: left;
     margin-bottom: 10px;
   }
-  .name{
+  .name {
     text-transform: capitalize;
+    
   }
 
   .container.tipo {
@@ -44,10 +44,12 @@ export const Container = styled.div`
     }
   }
 
-  .detalhes{
+  .detalhes {
     position: absolute;
     bottom: 20px;
     color: #ffffff;
+    cursor: pointer;
+    text-decoration: underline;
   }
 
   .img-pokemon {
