@@ -9,7 +9,7 @@ export const HeaderStyled = styled.div`
   height: 160px;
   left: 0px;
   top: 0px;
-  background: #80eae3;
+  background: #ffff;
 
   .logo-pokemon {
     display: flex;
@@ -18,13 +18,13 @@ export const HeaderStyled = styled.div`
     padding: 2px 0;
   }
 
-  .botao-pokedex {
+  .botao-excluir {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 4px 10px;
-    width: 250px;
+    width: 300px;
     height: 74px;
     left: 1112px;
     top: 41px;
@@ -40,6 +40,31 @@ export const HeaderStyled = styled.div`
     line-height: 36px;
 
     background: #f53333;
+    border-radius: 8px;
+  }
+
+  .botao-add {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 10px;
+    width: 300px;
+    height: 74px;
+    left: 1112px;
+    top: 41px;
+    margin-right: 40px;
+    color: #ffff;
+    size: 24px;
+    border: none;
+
+    font-family: "Poppins";
+    font-style: normal;
+    /* font-weight: 700; */
+    font-size: 24px;
+    line-height: 36px;
+
+    background: #33a4f5;
     border-radius: 8px;
   }
 

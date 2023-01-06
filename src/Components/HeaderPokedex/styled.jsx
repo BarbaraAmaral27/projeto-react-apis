@@ -10,8 +10,7 @@ export const HeaderStyled = styled.div`
   left: 0px;
   top: 0px;
   background: #ffff;
-  gap: 480px;
- 
+  gap: 480px; 
   
   .logo-pokemon {
     display: flex;
