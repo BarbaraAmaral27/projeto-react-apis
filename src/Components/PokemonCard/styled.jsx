@@ -7,6 +7,7 @@ export const Container = styled.div`
   background-color: ${(props) => props.color};
   border-radius: 12px;
   display: flex;
+  flex-direction: column;
   position: relative;
   margin: 33px;
   color: #ffffff;
@@ -18,16 +19,13 @@ export const Container = styled.div`
     text-align: left;
   }
 
-  h1 {
+  .name {
+    text-transform: capitalize;
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 0em;
     text-align: left;
-    margin-bottom: 10px;
-  }
-  .name {
-    text-transform: capitalize;
-    
+    margin-bottom: 10px;    
   }
 
   .container.tipo {
@@ -44,13 +42,13 @@ export const Container = styled.div`
     }
   }
 
-  .detalhes {
+  /* .detalhes {
     position: absolute;
     bottom: 20px;
     color: #ffffff;
     cursor: pointer;
     text-decoration: underline;
-  }
+  } */
 
   .img-pokemon {
     width: 193px;
@@ -73,12 +71,20 @@ export const Container = styled.div`
     border-radius: 8px;
     border: none;
     cursor: pointer;
-    position: absolute;
+    /* position: absolute; */
     bottom: 10px;
     right: 22px;
     z-index: 2;
     color: #000;
   }
+
+  .botoes {   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
   .pokeball {
     position: absolute;
     top: 0;

@@ -1,14 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Container } from "./styled";
 import pokeball from "../../assets/pokeball.svg";
 import { getTypes } from "../../utils/ReturnPokemonType";
 import { getColors } from "../../utils/ReturnCardColor";
 import axios from "axios";
+import { goToPokemonDetailPage } from "../../routes/coordinator";
+import { useNavigate } from "react-router-dom";
+import { GlobalContext } from "../../contexts/GlobalContext";
 
 const PokemonCard = ({ pokemonUrl, pokemon }) => {
-  const [detailPokemon, setDetailPokemon] = useState({});
+  const { addToPokelist, removeFromPokelist, page, setPage } =
+    useContext(GlobalContext);
 
-    const fetchPokemon = async () => {
+  const [detailPokemon, setDetailPokemon] = useState({});
+  const navigate = useNavigate();
+
+  const fetchPokemon = async () => {
     try {
       const response = await axios.get(pokemonUrl);
       setDetailPokemon(response.data);
@@ -23,27 +30,46 @@ const PokemonCard = ({ pokemonUrl, pokemon }) => {
 
   const configNumber = (index) => {
     return index < 10 ? `0${index}` : `${index}`;
-}
+  };
 
   return (
-    <Container color={getColors(detailPokemon.types && detailPokemon.types[0].type.name)} >
+    <Container
+      color={getColors(detailPokemon.types && detailPokemon.types[0].type.name)}
+    >
       <section>
         <p>{`#${configNumber(detailPokemon.id)}`}</p>
         <h1 className="name">{pokemon.name}</h1>
         <div className="container-tipo">
           {detailPokemon.types?.map((type, index) => {
-            return (<img key={index} src={getTypes(type.type.name)} alt="" />
+            return (
+              <img
+                key={index}
+                src={getTypes(type.type.name)}
+                alt="tipos de pokémon"
+              />
             );
           })}
         </div>
-        <p className="detalhes">Detalhes</p>
       </section>
-      <section>
-        <img className="img-pokemon"
-          src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${detailPokemon.id}.png`}
-          alt={pokemon.name}
-        />
-        <button>Capturar!</button>
+      <img
+        className="img-pokemon"
+        src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${detailPokemon.id}.png`}
+        alt={pokemon.name}
+      />
+      <section className="botoes">
+        <p
+          onClick={() => goToPokemonDetailPage(navigate, pokemon.name)}
+          className="detalhes"
+        >
+          Detalhes
+        </p>
+
+        {page === "PokedexPage" && (
+          <button onClick={() => addToPokelist(pokemon)}>Capturar!</button>
+        )}
+        {page === "PokemonListPage" && (
+          <button onClick={() => removeFromPokelist(pokemon)}>Excluir</button>
+        )}
       </section>
       <img className="pokeball" src={pokeball} alt="pokeball" />
     </Container>
