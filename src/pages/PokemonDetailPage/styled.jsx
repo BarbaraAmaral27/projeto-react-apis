@@ -5,6 +5,7 @@ export const DetailPageStyled = styled.main`
   display: flex;
   align-items: center;
   flex-direction: column;
+  height: 950px;
   
 
   .pokeballFundo {

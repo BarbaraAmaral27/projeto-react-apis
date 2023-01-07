@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { goToPokedexPage } from "../../routes/coordinator";
-import logo from "../../assets/logo.svg";
+import nomePokemon from "../../assets/nomePokemon.svg"
 import { HeaderStyled } from "./styled";
 import { GlobalContext } from "../../contexts/GlobalContext";
 
@@ -16,9 +16,10 @@ const Header = () => {
           onClick={() => {setPage("PokedexPage"); goToPokedexPage(navigate)}}
         >
           {"< Todos Pokémons"}
-        </p>
-        <a onClick={() => {setPage("PokedexPage"); goToPokedexPage(navigate)}}
-        img className="logo-pokemon" src={logo} alt="logo" />
+        </p>        
+        <img src={nomePokemon} alt="logo" />
+        <p onClick={() => {setPage("PokedexPage"); goToPokedexPage(navigate)}}></p>
+        
       </HeaderStyled>
     </>
   );

@@ -2,6 +2,7 @@ import React from "react";
 import pikachu from "../../assets/pikachu.png";
 import { NotFoundStyled } from "../NotFoundPage/styled";
 import Header from "../../Components/HeaderList/Header"
+import Footer from "../../Components/Footer/Footer"
 const NotFoundPage = () => {
   return (
     <div>
@@ -12,6 +13,7 @@ const NotFoundPage = () => {
           <figcaption>Página não encontrada.</figcaption>
         </figure>
       </NotFoundStyled>
+      <Footer/>
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import logo from "../../assets/logo.svg";
+import nomePokemon from "../../assets/nomePokemon.svg"
 import { HeaderStyled } from "./styled";
 import { goToPokedexPage } from "../../routes/coordinator";
 import { GlobalContext } from "../../contexts/GlobalContext";
@@ -28,7 +28,7 @@ const Header = ({ pokemonObject }) => {
         >
           {"< Todos Pokémons"}
         </p>
-        <img className="logo-pokemon" src={logo} alt="logo" />
+        <img className="nome-pokemon" src={nomePokemon} alt="logo" />
 
         <div className="pai-botao">
           {filterPokelist.length > 0 && (
