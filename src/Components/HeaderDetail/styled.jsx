@@ -11,26 +11,26 @@ export const HeaderStyled = styled.div`
   top: 0px;
   background: #ffff;
 
-  .logo-pokemon {
+  .nome-pokemon {
     display: flex;
-    width: 300px;
-    height: 160px;
+    width: 307px;
+    height: 113px;
     padding: 2px 0;
+    cursor: pointer;
   }
-
   .botao-excluir {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 4px 10px;
-    width: 300px;
+    padding: 6px 10px;
+    width: 287px;
     height: 74px;
     left: 1112px;
     top: 41px;
-    margin-right: 40px;
+    margin-right: 60px;
     color: #ffff;
-    size: 24px;
+    /* size: 24px; */
     border: none;
 
     font-family: "Poppins";

@@ -10,23 +10,25 @@ export const HeaderStyled = styled.div`
   left: 0px;
   top: 0px;
   background: #ffff;
-  gap: 480px;
+  gap: 530px;
  
   
-  .logo-pokemon {
-    display: flex;
-    width: 300px;
-    height: 160px;   
+  img {
+    position: absolute;
+    top: 9%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
   }
 
    .voltar-pokemons {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 4px 10px;
+    padding: 6px 10px;
     left: 1112px;
     top: 41px;
-    margin-left: 40px;
+    margin-left: 20px;
     color: black;
     size: 24px;
     cursor: pointer;

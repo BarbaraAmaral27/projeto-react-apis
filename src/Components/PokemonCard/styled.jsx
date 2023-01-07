@@ -67,7 +67,7 @@ export const Container = styled.div`
     padding: 4px 10px;
     width: 146px;
     height: 38px;
-    background: #ffffff;
+    background: #ffff;
     border-radius: 8px;
     border: none;
     cursor: pointer;
@@ -78,12 +78,16 @@ export const Container = styled.div`
     color: #000;
   }
 
+  .botao-excluir {
+    background-color: #FF6262;
+    color: #FFFFFF;
+  }
+
   .botoes {   
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-
 
   .pokeball {
     position: absolute;
