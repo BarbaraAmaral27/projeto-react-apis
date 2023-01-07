@@ -8,8 +8,11 @@ Neste projeto foi desenvolvida uma pokédex que tem por objetivo mostrar uma lis
 
 1- Home/Pokélist
     - Na página inicial são listados 151 cards de pokémons referentes à primeira geração de pokémons.
-	- Obs: Cada card possui os dados específicos de cada pokémon. Ex: id, nome, tipos, imagem, botão de detalhes e botão de capturar.
+
+    - Obs: Cada card possui os dados específicos de cada pokémon. Ex: id, nome, tipos, imagem, botão de detalhes e botão de capturar.
+
 	- Clicando em detalhes é possível visualizar as estatísticas e seus movimentos de batalha.
+    
 	- Clicando em capturar é possível catalogar o pokémon em sua pokédex.
 
 2-	Pokédex 
